@@ -1,37 +1,39 @@
-import requests, time
+import requests
+import time
 import os
 import platform
+
 try:
-   import time
-   import ip
-   import requests
-   import bs4
-   import html5lib
-   import phonenumbers
-   import argparse
-   import urllib3
-   import colorama
-except:
-   os.system("python3 -m pip install --upgrade pip")
-   os.system("pip install -r requirements.txt")
-   clear()
-   print(code_result + "Instalado com sucesso.\n")
-   main()
+    import time
+    import ip
+    import requests
+    import bs4
+    import html5lib
+    import phonenumbers
+    import argparse
+    import urllib3
+    import colorama
+except ImportError:
+    os.system("python3 -m pip install --upgrade pip")
+    os.system("pip install -r requirements.txt")
+    clear()
+    print(code_result + "Instalado com sucesso.\n")
+    main()
 
 def clear():
-   if platform.system() == "Windows":
-      os.system("cls")
-   elif platform.system() == "Linux":
-      os.system("clear")
-   else:
-       os.system("clear")
+    if platform.system() == "Windows":
+        os.system("cls")
+    elif platform.system() == "Linux":
+        os.system("clear")
+    else:
+        os.system("clear")
 
 def youtube():
-   if platform.system() == "Windows":
-      import webbrowser
-      webbrowser.open_new_tab("https://www.youtube.com/@DsecurityCommunity")
-   else:
-       os.system("termux-open-url https://www.youtube.com/@DsecurityCommunity")
+    if platform.system() == "Windows":
+        import webbrowser
+        webbrowser.open_new_tab("https://www.youtube.com/@DsecurityCommunity")
+    else:
+        os.system("termux-open-url https://www.youtube.com/@DsecurityCommunity")
 
 clear()
 R='\033[1;31m'; B='\033[1;34m'; C='\033[1;37m'; Y='\033[1;33m'; G='\033[1;32m'; RT='\033[;0m'
@@ -43,11 +45,12 @@ code_error = C + '[' + R + '!' + C + '] '
 
 print(f'''{C}
 
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-        ▓▓▓▓██░░░░░░░░░░░░░░░░▓▓██▓▓
-      ██░░░░                    ░░░░▓▓
-    ▓▓░░                            ░░▓▓
-  ██░░                                ░░██
+      
+              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+       ▓▓▓▓██ ░░░░░░░░░░░░░░ ▓▓██▓▓
+      ██░░░░                      ░░▓▓
+    ▓▓░░                             ░▓▓
+  ██░░                                 ░██
   ██    ░░░░▓▓░░░░      ░░░░░░░░░░░░    ▓▓
   ▓▓  ▓▓░░▒▒▓▓▓▓▓▓░░    ░░▓▓▓▓▓▓▒▒░░▓▓  ▓▓
   ▓▓██          ▓▓██    ████          ██▓▓
@@ -71,18 +74,17 @@ print(f'''{C}
               ██░░  ▓▓▓▓  ░░▒▒
                 ▓▓▓▓▓▓▓▓▓▓▓▓
                   É O zzk
-'''); time.sleep(1.5)
+''')
+time.sleep(1.5)
 clear()
-
-
 
 url = "https://raw.githubusercontent.com/Snuking/snuking/main/version.txt"
 version = str(requests.get(url).text)
 
 def main():
-  clear()
-  v = "1.0.3"
-  print(f'''{G}
+    clear()
+    v = "1.0.3"
+    print(f'''{G}
 \n
 .----.______
 |           |
@@ -93,11 +95,11 @@ def main():
 |/__________/ {v}
 {C}
  ''')
-  print(f"{Y}Atual: {version}{C}")
+    print(f"{Y}Atual: {version}{C}")
 
-  print("\n" + code_info + "Menu.")
+    print("\n" + code_info + "Menu.")
 
-  print(f'''
+    print(f'''
 {C}[{G}i{C}] Formas de operação:
 [{G}1{C}] IP.
 [{G}2{C}] Nome.
@@ -116,7 +118,7 @@ def main():
 [{G}00{C}] {R}Sair.{C}
 ''')
 tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
-  if tool == "1":
+if tool == "1":
      clear()
      import ip
      ip.main()
@@ -157,13 +159,13 @@ tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
   elif tool == "11":
      youtube()
      main()
+
   elif tool == "44":
          print(code_result + "Abrindo o tutorial de como atualizar no YouTube...")
          time.sleep(2)
          youtube()
          main()
-
-elif tool == "55":
+  elif tool == "55":
      import novidades
      novidades.main()
   elif tool == "66":
@@ -178,4 +180,6 @@ elif tool == "55":
      print(f'{C}[{R}-{C}] Seleção inválida.')
      time.sleep(0.2)
      main()
+
 main()
+
