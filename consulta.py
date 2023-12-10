@@ -2,6 +2,8 @@ import requests, time
 import os
 import platform
 try:
+   import time
+   import ip
    import requests
    import bs4
    import html5lib
