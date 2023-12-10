@@ -21,9 +21,12 @@ Telefone: Formato internacional; Formato local; País; Cidade/Estado; Operadora;
 
 [+] Instalação: Para instalar no seu Termux, siga os comandos:
 
-apt update && apt upgrade apt install python pkg install git
+apt update && apt upgrade
+ pkg install python
+ pkg install git
 git clone https://github.com/PerfectZzk/D.Security
 ls
-cd snuking python install.py python consulta.py
+cd D.Security 
+python consulta.py
 
 © Zzk, 2024
