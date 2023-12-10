@@ -116,7 +116,7 @@ def main():
 [{G}00{C}] {R}Sair.{C}
 ''')
 tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
-  elif tool == "1":
+  if tool == "1":
      clear()
      import ip
      ip.main()
