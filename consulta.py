@@ -13,12 +13,10 @@ try:
     import argparse
     import urllib3
     import colorama
+
 except ImportError:
     os.system("python3 -m pip install --upgrade pip")
     os.system("pip install -r requirements.txt")
-    clear()
-    print(code_result + "Instalado com sucesso.\n")
-    main()
 
 def clear():
     if platform.system() == "Windows":
@@ -78,7 +76,7 @@ print(f'''{C}
 time.sleep(1.5)
 clear()
 
-url = "https://raw.githubusercontent.com/Snuking/snuking/main/version.txt"
+url = "https://github.com/PerfectZzk"
 version = str(requests.get(url).text)
 
 def main():
@@ -117,69 +115,67 @@ def main():
 [{G}66{C}] Ajuda.
 [{G}00{C}] {R}Sair.{C}
 ''')
-tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
-if tool == "1":
-     clear()
-     import ip
-     ip.main()
-  elif tool == "2":
-     clear()
-     import nome
-     nome.main()
-  elif tool == "3":
-     clear()
-     import cpf
-     cpf.main()
-  elif tool == "4":
-     clear()
-     import vizinhos
-     vizinhos.main()
-  elif tool == "5":
-     clear()
-     import cep
-     cep.main()
-  elif tool == "6":
-     clear()
-     import cnpj
-     cnpj.main()
-  elif tool == "7":
-     clear()
-     import placa
-     placa.main()
-  elif tool == "8":
-     clear()
-     import telefone
-     telefone.main()
-  elif tool == "9":
-     import bin
-     bin.main()
-  elif tool == "10":
-     import gerador
-     gerador.main()
-  elif tool == "11":
-     youtube()
-     main()
-
-  elif tool == "44":
-         print(code_result + "Abrindo o tutorial de como atualizar no YouTube...")
-         time.sleep(2)
-         youtube()
-         main()
-  elif tool == "55":
-     import novidades
-     novidades.main()
-  elif tool == "66":
-     import ajuda
-     ajuda.main()
-  elif tool == "00":
-     clear()
-     print(f'\n{G}Somos uma comunidade.{C}\n')
-     exit()
-  else:
-     clear()
-     print(f'{C}[{R}-{C}] Seleção inválida.')
-     time.sleep(0.2)
-     main()
+    tool=input(f'{C}[{G}+{C}] Selecione a forma de operação:{B} ')
+    if tool == "1":
+      clear()
+      import ip
+      ip.main()
+    elif tool == "2":
+      clear()
+      import nome
+      nome.main()
+    elif tool == "3":
+      clear()
+      import cpf
+      cpf.main()
+    elif tool == "4":
+      clear()
+      import vizinhos
+      vizinhos.main()
+    elif tool == "5":
+      clear()
+      import cep
+      cep.main()
+    elif tool == "6":
+      clear()
+      import cnpj
+      cnpj.main()
+    elif tool == "7":
+      clear()
+      import placa
+      placa.main()
+    elif tool == "8":
+      clear()
+      import telefone
+      telefone.main()
+    elif tool == "9":
+      import bin
+      bin.main()
+    elif tool == "10":
+      import gerador
+      gerador.main()
+    elif tool == "11":
+      youtube()
+      main()
+    elif tool == "44":
+      print(code_result + "Abrindo o tutorial de como atualizar no YouTube...")
+      time.sleep(2)
+      youtube()
+      main()
+    elif tool == "55":
+      import novidades
+      novidades.main()
+    elif tool == "66":
+      import ajuda
+      ajuda.main()
+    elif tool == "00":
+      clear()
+      print(f'\n{G}Somos uma comunidade.{C}\n')
+      exit()
+    else:
+      clear()
+      print(f'{C}[{R}-{C}] Seleção inválida.')
+      time.sleep(0.2)
+      main()
 
 main()
-
